@@ -12,7 +12,7 @@ import YatimaStdLib.Option
 import YatimaStdLib.RWST
 import YatimaStdLib.Monad
 
-open Std (RBSet)
+open Batteries (RBSet)
 
 open Megaparsec.Errors
 open Megaparsec.Errors.ParseError

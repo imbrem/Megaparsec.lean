@@ -73,7 +73,7 @@ def ignore :=
 mutual
 
   partial def lispParser : ParsecT m Char ℘ Unit Lisp :=
-    withRange (_i := im) lispExprP
+    withRange _ lispExprP (_i := im)
 
   partial def listP : ParsecT m Char ℘ Unit (Range → Lisp) :=
     label (_i := im) "list" $ do

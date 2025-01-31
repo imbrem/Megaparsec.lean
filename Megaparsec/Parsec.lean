@@ -139,7 +139,7 @@ open StreamErrors in
 open Outcome in
 instance [Ord β] : Alternative (ParsecT m β ℘ E) where
   failure := fun _ s _ _ _ eerr =>
-    let empty : Std.RBSet (ErrorItem β) compare := default
+    let empty : Batteries.RBSet (ErrorItem β) compare := default
     eerr.2 (.trivial s.offset .none empty) s
   orElse guess thunk :=
     fun xi s cok cerr eok eerr =>
